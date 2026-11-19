@@ -1,0 +1,160 @@
+@import "tailwindcss";
+
+@layer base {
+  * {
+    border-color: #27272a;
+  }
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+  code, pre, .font-mono {
+    font-family: 'JetBrains Mono', 'Fira Code', monospace;
+  }
+}
+
+/* Sleek IDE Dark Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #090b10;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #27272a;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3f3f46;
+}
+
+.font-showcase-display {
+  font-family: 'Outfit', 'Plus Jakarta Sans', sans-serif;
+}
+
+.font-showcase-body {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+@keyframes viracode-aura-float {
+  0%, 100% {
+    transform: translate3d(0, 0, 0) scale(1);
+    opacity: 0.45;
+  }
+  50% {
+    transform: translate3d(0, -14px, 0) scale(1.04);
+    opacity: 0.65;
+  }
+}
+
+.viracode-aura {
+  animation: viracode-aura-float 9s cubic-bezier(0.16, 1, 0.3, 1) infinite;
+}
+
+@keyframes viracode-orbit-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.viracode-orbit-slow {
+  transform-origin: 500px 260px;
+  animation: viracode-orbit-spin 48s linear infinite;
+}
+
+@keyframes viracode-sheen-slide {
+  0% {
+    transform: translate3d(-130%, 0, 0) skewX(-18deg);
+  }
+  100% {
+    transform: translate3d(230%, 0, 0) skewX(-18deg);
+  }
+}
+
+.viracode-sheen-btn {
+  position: relative;
+  overflow: hidden;
+}
+
+.viracode-sheen-btn::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  width: 45%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.24), transparent);
+  transform: translate3d(-130%, 0, 0) skewX(-18deg);
+  pointer-events: none;
+}
+
+.viracode-sheen-btn:hover::after {
+  animation: viracode-sheen-slide 0.75s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .viracode-aura,
+  .viracode-orbit-slow,
+  .viracode-sheen-btn:hover::after {
+    animation: none;
+  }
+}
+
+/* Official Google Sign-In Material Button */
+.gsi-material-button {
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-color: #ffffff;
+  border: 1px solid #747775;
+  border-radius: 20px;
+  box-sizing: border-box;
+  color: #1f1f1f;
+  cursor: pointer;
+  font-family: 'Plus Jakarta Sans', 'Roboto', arial, sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  height: 38px;
+  letter-spacing: 0.25px;
+  outline: none;
+  overflow: hidden;
+  padding: 0 14px;
+  position: relative;
+  text-align: center;
+  transition: background-color 0.2s, box-shadow 0.2s;
+  vertical-align: middle;
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gsi-material-button .gsi-material-button-icon {
+  height: 18px;
+  margin-right: 10px;
+  min-width: 18px;
+  width: 18px;
+}
+
+.gsi-material-button .gsi-material-button-content-wrapper {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  height: 100%;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+}
+
+.gsi-material-button:hover {
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.45);
+  background-color: #f8fafd;
+}
+
+

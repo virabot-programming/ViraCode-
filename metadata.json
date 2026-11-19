@@ -1,0 +1,8 @@
+{
+  "name": "ViraCode IDE v4.2.1 DEV",
+  "description": "Hyper-advanced multi-threaded virtual IDE, AST simulation runtime, polyglot compiler, and autonomous 4-agent software engineering workstation.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
